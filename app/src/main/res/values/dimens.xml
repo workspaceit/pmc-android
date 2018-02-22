@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="decor">5px</dimen>
+    <dimen name="folder">15px</dimen>
+
+</resources>

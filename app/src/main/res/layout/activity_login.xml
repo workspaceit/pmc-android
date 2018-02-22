@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    app:theme="@style/LoginTheme"
+    tools:context="www.foxcoders.com.photoclubbingme.activity.LoginActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:contentDescription="@string/app_name"
+        android:scaleType="centerCrop"
+        android:src="@drawable/logo_trans" />
+
+    <RelativeLayout
+        android:id="@+id/lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginTop="250dp">
+
+        <LinearLayout
+            android:id="@+id/style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cardview_shadow_end_color"
+            android:gravity="center_vertical|center_horizontal"
+            android:orientation="vertical"
+            android:paddingBottom="30dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:weightSum="1">
+
+
+            <EditText
+                android:id="@+id/email"
+                fontPath="fonts/MyriadPro/MyriadPro-Regular.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:hint="Username"
+                android:inputType="text|textEmailAddress"
+                android:textAlignment="textStart"
+                android:textColor="@color/loginformTxt"
+                android:textSize="18sp"
+                android:textColorHint="@color/loginformTxt"/>
+
+            <EditText
+                android:id="@+id/password"
+                fontPath="fonts/MyriadPro/MyriadPro-Regular.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:textColorHint="@color/loginformTxt"
+                android:textColor="@color/loginformTxt" />
+
+            <Button
+                android:id="@+id/forgotPassword"
+                fontPath="fonts/MyriadPro/MyriadPro-Regular.otf"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@android:color/transparent"
+                android:textAlignment="viewEnd"
+                android:textColor="@color/forgotPassword"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/login"
+                fontPath="fonts/MyriadPro/MyriadPro-Regular.otf"
+                android:layout_width="98dp"
+                android:layout_height="wrap_content"
+                android:background="@color/loginBtn"
+                android:text="Log In "
+                android:textColor="@color/cardview_light_background" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

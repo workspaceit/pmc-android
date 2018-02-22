@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg"
+    >
+
+    <ImageView
+        android:id="@+id/slideshow_item_img"
+        android:layout_width="match_parent"
+        android:src="@drawable/img_3"
+        android:scaleType="fitXY"
+        android:layout_height="240dp" />
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:id="@+id/slideshow_item_desc"
+        fontPath="fonts/Exo2/Exo2-Bold.otf"
+        android:text="THE ANNEX"
+        android:textSize="24sp"
+        android:textAllCaps="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:textColor="#c1bdff"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/slideshow_item_subtitle"
+        android:layout_gravity="center_horizontal"
+        fontPath="fonts/Exo2/Exo2-Bold.otf"
+        android:text="Annex Friday"
+        android:layout_marginTop="-7dp"
+        android:textColor="#8b84ff"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/slideshow_item_date"
+        fontPath="fonts/Exo2/Exo2-Bold.otf"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="-4dp"
+        android:layout_gravity="center_horizontal"
+        android:text="December 12, 2017"
+        android:textColor="#e1e1e1"
+        android:layout_marginBottom="20dp"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

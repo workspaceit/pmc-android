@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/thumbCard"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@color/nav_bg"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="0dp">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/nav_bg">
+
+
+        <www.foxcoders.com.photoclubbingme.components.SquareImageView
+            android:id="@+id/img_th"
+            android:layout_width="100dp"
+            android:scaleType="centerCrop"
+            android:layout_height="100dp"
+            android:src="@drawable/travle"/>
+
+        <View
+            android:id="@+id/mask"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#9A5b40c1" />
+
+        <CheckBox
+            android:id="@+id/checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/CheckboxThem" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:background="@color/screen_bg"
+            android:id="@+id/title_hbar"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/title"
+            fontPath="fonts/Exo2/Exo2-Bold.otf"
+            android:layout_below="@id/title_hbar"
+            android:layout_width="match_parent"
+            android:background="@color/nav_bg"
+            android:layout_marginBottom="3dp"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+
+</android.support.v7.widget.CardView>

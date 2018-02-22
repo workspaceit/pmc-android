@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#dfdfdf</color>
+    <color name="colorPrimaryDark">#808080</color>
+    <color name="colorAccent">#eb105a</color>
+    <color name="colorText">#CC2635</color>
+    <color name="colorIndigo">#1976D2</color>
+    <color name="colorWhite">#a09af4</color>
+    <color name="colorIndigoDark">#1565C0</color>
+    <color name="loginformTxt">#a09af4</color>
+    <color name="forgotPassword">#8c87c9</color>
+    <color name="loginBtn">#640672</color>
+    <color name="nav_bg">#211f49</color>
+    <color name="section_header">#dddbff</color>
+    <color name="screen_bg">#0f0d34</color>
+    <color name="section_font">#babacc</color>
+    <color name="section_bg">#110e35</color>
+
+
+</resources>

@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorWhite</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:textColorPrimary">@color/colorText</item>
+        <item name="android:actionMenuTextColor">@color/colorText</item>
+        <item name="android:textViewStyle">@style/MonoSpaceTextViewStyle</item>
+    </style>
+
+    <style name="LoginTheme" parent="AppTheme">
+        <item name="colorAccent">@color/colorWhite</item>
+    </style>
+
+    <style name="CheckboxThem" parent="AppTheme">
+
+        <item name="colorAccent">@android:color/white</item>
+        <item name="colorPrimaryDark">@color/colorAccent</item>
+    </style>
+
+    <style name="ProgressbarThem" parent="AppTheme">
+        <item name="colorAccent">#02C54B</item>
+    </style>
+
+    <style name="MonoSpaceTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">monospace</item>
+    </style>
+    <style name="alertStyle" parent="@android:style/Theme.Dialog">
+        <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
+        <item name="android:textColorPrimary">@color/section_font</item>
+    </style>
+
+    <style name="CustomAlertDialogStyle">
+        <item name="android:bottomBright">@color/nav_bg</item>
+        <item name="android:bottomDark">@color/nav_bg</item>
+        <item name="android:bottomMedium">@color/nav_bg</item>
+        <item name="android:centerBright">@color/nav_bg</item>
+        <item name="android:centerDark">@color/nav_bg</item>
+        <item name="android:centerMedium">@color/nav_bg</item>
+        <item name="android:fullBright">@color/nav_bg</item>
+        <item name="android:fullDark">@color/nav_bg</item>
+        <item name="android:topBright">@color/nav_bg</item>
+        <item name="android:topDark">@color/nav_bg</item>
+    </style>
+
+</resources>

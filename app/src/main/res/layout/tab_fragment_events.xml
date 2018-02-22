@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg"
+    android:orientation="vertical"
+    android:weightSum="1">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/sec_title"
+                fontPath="fonts/Exo2/Exo2-Bold.otf"
+                android:textAllCaps="true"
+                android:layout_marginStart="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.08"
+                android:text="Today's Event(s)"
+                android:textColor="@color/section_header"
+                android:textSize="24sp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.08"
+                app:cardBackgroundColor="@color/nav_bg">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+                    <ImageView
+                        android:id="@+id/eventImage"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:layout_margin="10dp"
+                        app:srcCompat="@drawable/img_1"
+                        android:background="@color/loginformTxt"
+                        android:padding="1dp"/>
+
+                        <TextView
+                            android:id="@+id/event_name"
+                            fontPath="fonts/Exo2/Exo2-Bold.otf"
+                            android:onClick="onClick"
+                            android:layout_toRightOf="@id/eventImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignTop="@id/eventImage"
+                            android:layout_marginTop="2dp"
+                            android:text="The Ultimate Black Party"
+                            android:textAllCaps="true"
+                            android:textColor="@android:color/white"
+                            android:textSize="24sp"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/add_line_1"
+                            fontPath="fonts/Exo2/Exo2-Italic.otf"
+                            android:layout_toRightOf="@id/eventImage"
+                            android:layout_below="@id/event_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="Detroit Fillmore"
+                            android:textAlignment="textStart"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/holo_blue_bright"
+                            android:textStyle="normal" />
+
+                        <TextView
+                            android:id="@+id/city_count"
+                            fontPath="fonts/Exo2/Exo2-Regular.otf"
+                            android:layout_toEndOf="@id/eventImage"
+                            android:layout_alignBottom="@id/eventImage"
+                            android:layout_width="match_parent"
+                            android:layout_marginRight="10dp"
+                            android:layout_height="wrap_content"
+                            android:text="Tap here to go to Gallery View"
+                            android:textColor="@android:color/holo_red_dark" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:id="@+id/textView12"
+                fontPath="fonts/Exo2/Exo2-Bold.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.08"
+                android:textAllCaps="true"
+                android:layout_marginStart="5dp"
+                android:text="Most Recent Events"
+                android:textColor="@color/section_header"
+                android:textSize="24sp" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recent_events"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.08"
+                android:background="@color/nav_bg" />
+
+            <TextView
+                android:id="@+id/textView13"
+                fontPath="fonts/Exo2/Exo2-Bold.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_weight="0.08"
+                android:textAllCaps="true"
+                android:layout_marginStart="5dp"
+                android:text="More Events(25) \u25be"
+                android:textColor="@color/section_header"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:id="@+id/more_events_holder"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/nav_bg">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/more_events"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/nav_bg" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

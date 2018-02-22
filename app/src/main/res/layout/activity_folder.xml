@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen_bg"
+    tools:context="www.foxcoders.com.photoclubbingme.activity.FolderActivity">
+
+    <include
+        android:id="@+id/folderToolbar"
+        layout="@layout/show_case_toolbar" />
+
+    <!--<LinearLayout-->
+    <!--android:id="@+id/action"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_below="@+id/folderToolbar"-->
+    <!--android:gravity="start"-->
+    <!--android:orientation="horizontal"-->
+    <!--android:padding="10dp"-->
+    <!--android:layout_alignParentEnd="true">-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvNew"-->
+    <!--fontPath="fonts/roboto-condensed/RobotoCondensed-Regular.ttf"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:clickable="true"-->
+    <!--android:text="Newest"-->
+    <!--android:textColor="@color/colorText"-->
+    <!--android:textSize="12sp" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tvPop"-->
+    <!--fontPath="fonts/roboto-condensed/RobotoCondensed-Regular.ttf"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:clickable="true"-->
+    <!--android:text="Popular"-->
+    <!--android:textColor="@color/colorText"-->
+    <!--android:textSize="12sp" />-->
+
+    <!--<Spinner-->
+    <!--android:id="@+id/spnDate"-->
+    <!--fontPath="fonts/roboto-condensed/RobotoCondensed-Regular.ttf"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="1dp">-->
+
+    <!--</Spinner>-->
+
+    <!--</LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:baselineAligned="true"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_below="@+id/folderToolbar"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+
+            android:id="@+id/linearLayout"
+            android:layout_width="134dp"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:background="@drawable/textline"
+            android:gravity="center_horizontal">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/folder_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="1dp"
+                android:layout_marginTop="2dp"
+                android:background="@color/section_bg"
+                android:scrollbars="vertical">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/nav_bg"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.85"
+                android:layout_marginBottom="5dp"
+                app:cardBackgroundColor="@color/nav_bg">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/event_name"
+                        fontPath="fonts/Exo2/Exo2-Bold.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="BEACH PARTY 2015"
+                        android:textAlignment="textStart"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:layout_marginStart="5dp" />
+
+                    <TextView
+                        android:id="@+id/event_date"
+                        fontPath="fonts/Exo2/Exo2-Regular.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="26 July 2015"
+                        android:textColor="@color/loginformTxt"
+                        android:textSize="14sp"
+                        android:layout_below="@+id/event_name"
+                        android:layout_alignStart="@+id/event_name" />
+
+                    <TextView
+                        android:id="@+id/event_img_count"
+                        fontPath="fonts/Exo2/Exo2-Regular.otf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="26 PHOTOS"
+                        android:textAllCaps="true"
+                        android:textColor="@color/loginformTxt"
+                        android:layout_below="@id/event_name"
+                        android:layout_alignEnd="@+id/cancelFullscreen" />
+
+                    <ImageButton
+                        android:id="@+id/cancelFullscreen"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginEnd="8dp"
+                        android:background="@drawable/ic_keyboard_arrow_left_white_24dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true" />
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <www.foxcoders.com.photoclubbingme.components.GridRecycleView
+                android:id="@+id/thumb_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <!--<android.support.v7.widget.RecyclerView
+                android:id="@+id/thumb_rv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            </android.support.v7.widget.RecyclerView>-->
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/navView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/adv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add" />
+
+        <include
+            android:id="@+id/nav"
+            layout="@layout/bottom_nav" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">PhotoClubbing Me</string>
+    <string name="skip"><![CDATA[skip>]]></string>
+    <string name="secret_code">Let Me In</string>
+    <string name="number">(90)</string>
+    <string name="_25">25 photos</string>
+    <string name="location">Beach Party 2016</string>
+</resources>

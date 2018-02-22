@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/screen_bg"
+    android:gravity="center"
+    tools:context="www.foxcoders.com.photoclubbingme.activity.ShowCaseActivity">
+
+
+    <include
+        android:id="@+id/showCaseToolbar"
+        layout="@layout/show_case_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/navLay"
+        android:layout_below="@id/showCaseToolbar"
+        >
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:weightSum="1">-->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/textline"
+                >
+                <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/show_case_slideShow"
+                    android:gravity="center_vertical"
+                    android:layout_width="300dp"
+                    android:layout_height="500dp"
+                    app:icvp_center_page_scale_offset="10dp"
+                    app:icvp_interpolator="@android:anim/accelerate_decelerate_interpolator"
+                    app:icvp_max_page_scale="0.90"
+                    app:icvp_medium_scaled="false"
+                    app:icvp_min_page_scale="0.7"
+                    app:icvp_min_page_scale_offset="5dp"
+                    app:icvp_scroll_duration="250"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="3dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_marginBottom="3dp"
+
+                    />
+
+                <!--<com.makeramen.roundedimageview.RoundedImageView-->
+                    <!--android:id="@+id/showCase"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_marginLeft="3dp"-->
+                    <!--android:layout_marginRight="3dp"-->
+                    <!--android:layout_marginTop="3dp"-->
+                    <!--android:layout_marginBottom="3dp"-->
+                    <!--android:adjustViewBounds="true"-->
+                    <!--android:src="@drawable/full_4"-->
+                    <!--app:riv_corner_radius="0dp" />-->
+
+                <GridLayout
+                    android:id="@+id/show_case_titlebar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha=".75"
+                    android:layout_marginTop="3dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@android:color/black">
+
+                    <ImageButton
+                        android:id="@+id/alert"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="start"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/alert" />
+
+                    <ImageButton
+                        android:id="@+id/fb"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="end"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/facebook" />
+
+                    <ImageButton
+                        android:id="@+id/gplus"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/gplus" />
+
+                    <ImageButton
+                        android:id="@+id/insta"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/instagram" />
+
+                    <ImageButton
+                        android:id="@+id/twitter"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/twitter" />
+                </GridLayout>
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/imgWatermark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/show_case_slideShow"
+                    android:layout_alignEnd="@+id/show_case_slideShow"
+                    android:layout_alignStart="@+id/show_case_slideShow"
+                    android:adjustViewBounds="true"
+                    android:src="@drawable/water_mark"
+                    android:visibility="gone"
+                    android:alpha=".75"
+                    app:riv_corner_radius_bottom_left="12dp"
+                    app:riv_corner_radius_bottom_right="12dp" />
+
+            <LinearLayout
+                android:id="@+id/image_tnd_holder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/show_case_slideShow"
+                android:layout_alignParentBottom="true"
+                android:orientation="vertical"
+                android:background="@android:color/black"
+                android:alpha="0.75">
+
+            <TextView
+                android:id="@+id/image_title"
+                fontPath="fonts/Exo2/Exo2-Bold.otf"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:layout_marginBottom="3dp"
+                android:layout_marginStart="5dp"
+                android:text="photo title"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                />
+
+            <TextView
+                android:id="@+id/image_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Everyone loves to feel appreciated, which is why thank you notes are still an important way to express your gratitude. Whether you're sending a thank you for a generous wedding gift or showing your enthusiasm after a job interview, a carefully crafted thank you note is an excellent way to express to the recipient that you"
+                fontPath="fonts/Exo2/Exo2-Regular.otf"
+                android:textSize="16sp"
+                android:textColor="@color/colorPrimary" />
+            </LinearLayout>
+            </RelativeLayout>
+    </ScrollView>
+
+
+    <RelativeLayout
+        android:id="@+id/hideMask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/navLay"
+        android:layout_below="@+id/showCaseToolbar"
+        android:layout_margin="10dp"
+        android:alpha="0.7"
+        android:visibility="gone">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:src="#ffffff"
+            app:riv_corner_radius="12dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_visibility_off"
+            android:tint="@color/colorAccent" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/navLay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/adv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/add" />
+
+        <include
+            android:id="@+id/nav"
+            layout="@layout/bottom_nav" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/deleteMask"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:alpha="0.5"
+            android:scaleType="centerCrop"
+            android:src="#000000" />
+        <!--app:riv_corner_radius="12dp"-->
+
+
+        <ProgressBar
+            android:id="@+id/deleteProgress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:progress="75" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/deleteProgress"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="deleting..."
+            android:textColor="@color/colorWhite"
+            android:textSize="18sp"
+            android:textStyle="italic" />
+
+
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/show_case_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/bottom_nav" />
+
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_below="@id/toolbar"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg">
+
+    <TextView
+        android:id="@+id/textView13"
+        fontPath="fonts/Exo2/Exo2-Bold.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:text="More Locations(25) \u25be"
+        android:textColor="@color/section_header"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/btn_slideshow"
+        fontPath="fonts/Exo2/Exo2-Bold.otf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:background="@color/nav_bg"
+        android:layout_alignBaseline="@id/textView13"
+        android:layout_marginEnd="15dp"
+        android:padding="5dp"
+        android:text="Slideshow"
+        android:onClick="onSlideshowClick"
+        android:textColor="@color/section_header"
+        android:textSize="12sp" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/more_locations"
+        android:layout_below="@id/textView13"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginEnd="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.08"
+        android:background="@color/nav_bg" />
+
+</RelativeLayout>
