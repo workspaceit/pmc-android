@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/screen_bg"
     android:gravity="center"
-    tools:context="www.foxcoders.com.photoclubbingme.activity.ShowCaseActivity">
+    tools:context="com.workspaceit.photoclubbingme.activity.ShowCaseActivity">
 
 
     <include

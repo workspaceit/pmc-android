@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/colorPrimary"
-    tools:context="www.foxcoders.com.photoclubbingme.activity.SendInfoActivity">
+    tools:context="com.workspaceit.photoclubbingme.activity.SendInfoActivity">
 
     <include layout="@layout/toolbar"
         android:id="@+id/infoToolbar"/>

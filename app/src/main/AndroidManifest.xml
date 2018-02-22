@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="www.foxcoders.com.photoclubbingme">
+    package="com.workspaceit.photoclubbingme">
     <!-- if you want to load images from the internet -->
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -8,7 +8,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <application
-        android:name=".PictureClubbingMe"
+        android:name="com.workspaceit.photoclubbingme.PictureClubbingMe"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -17,21 +17,21 @@
         android:largeHeap="true"
         android:hardwareAccelerated="false"
         android:theme="@style/AppTheme">
-        <activity android:name=".activity.LoginActivity">
+        <activity android:name="com.workspaceit.photoclubbingme.activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MainActivity" android:hardwareAccelerated="true"/>
-        <activity android:name=".activity.FolderActivity" />
-        <activity android:name=".activity.SendInfoActivity" />
-        <activity android:name=".activity.ShowCaseActivity" />
-        <activity android:name=".activity.MainSlideshowActivity" />
-        <activity android:name=".activity.SendActivity" />
-        <activity android:name=".activity.SlideShowActivity"></activity>
-        <activity android:name=".activity.NewSliderActivity"></activity>
+        <activity android:name="com.workspaceit.photoclubbingme.activity.MainActivity" android:hardwareAccelerated="true"/>
+        <activity android:name="com.workspaceit.photoclubbingme.activity.FolderActivity" />
+        <activity android:name="com.workspaceit.photoclubbingme.activity.SendInfoActivity" />
+        <activity android:name="com.workspaceit.photoclubbingme.activity.ShowCaseActivity" />
+        <activity android:name="com.workspaceit.photoclubbingme.activity.MainSlideshowActivity" />
+        <activity android:name="com.workspaceit.photoclubbingme.activity.SendActivity" />
+        <activity android:name="com.workspaceit.photoclubbingme.activity.SlideShowActivity"></activity>
+        <activity android:name="com.workspaceit.photoclubbingme.activity.NewSliderActivity"></activity>
     </application>
 
 </manifest>

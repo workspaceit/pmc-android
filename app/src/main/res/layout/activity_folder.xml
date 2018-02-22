@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/screen_bg"
-    tools:context="www.foxcoders.com.photoclubbingme.activity.FolderActivity">
+    tools:context="com.workspaceit.photoclubbingme.activity.FolderActivity">
 
     <include
         android:id="@+id/folderToolbar"
@@ -151,7 +151,7 @@
                 </RelativeLayout>
             </android.support.v7.widget.CardView>
 
-            <www.foxcoders.com.photoclubbingme.components.GridRecycleView
+            <com.workspaceit.photoclubbingme.components.GridRecycleView
                 android:id="@+id/thumb_rv"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
