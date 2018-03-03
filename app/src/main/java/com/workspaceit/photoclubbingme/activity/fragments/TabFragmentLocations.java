@@ -20,6 +20,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.workspaceit.photoclubbingme.EventBus.LocationItemClickEventBus;
 import com.workspaceit.photoclubbingme.ListSpacingDecoration;
 import com.workspaceit.photoclubbingme.Util;
 import com.workspaceit.photoclubbingme.activity.FolderActivity;
@@ -30,6 +31,8 @@ import com.workspaceit.photoclubbingme.adapter.item.ThumbnailItem;
 import java.util.ArrayList;
 
 import com.workspaceit.photoclubbingme.R;
+
+import org.greenrobot.eventbus.EventBus;
 
 public class TabFragmentLocations extends Fragment {
     RecyclerView recentLocations,moreLocations;
@@ -93,7 +96,8 @@ public class TabFragmentLocations extends Fragment {
         eventAdapter.setClickListener(new EventAdapter.ItemClickListener() {
             @Override
             public void onItemClick(View view, int position) {
-                startActivity(new Intent(getActivity(), FolderActivity.class));
+                //startActivity(new Intent(getActivity(), FolderActivity.class));
+                EventBus.getDefault().post(new LocationItemClickEventBus("Hello"));
             }
         });
 

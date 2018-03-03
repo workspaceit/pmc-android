@@ -18,6 +18,7 @@ public class LocationTabFragmentHolder extends Fragment {
 
     public static final int USE_FRAGMENT_LOCATION = 0;
     public static final int USE_FRAGMENT_VENUE = 1;
+    public static final int USE_FRAGMENT_EVENTS = 2;
 
     private View rootView = null;
 
@@ -27,6 +28,8 @@ public class LocationTabFragmentHolder extends Fragment {
                 return new TabFragmentLocations();
             case USE_FRAGMENT_VENUE:
                 return new ShowVenueDetailsFragment();
+            case USE_FRAGMENT_EVENTS:
+                return new ShowEventDetailsFragment();
             default:
                 return new TabFragmentLocations();
         }

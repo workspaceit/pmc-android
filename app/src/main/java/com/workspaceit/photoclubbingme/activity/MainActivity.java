@@ -15,6 +15,8 @@ import android.view.MenuItem;
 import android.view.View;
 
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
+
+import com.workspaceit.photoclubbingme.EventBus.LocationItemClickEventBus;
 import com.workspaceit.photoclubbingme.R;
 
 import com.workspaceit.photoclubbingme.activity.fragments.LocationTabFragmentHolder;
@@ -25,6 +27,11 @@ import com.workspaceit.photoclubbingme.adapter.ThumbnailAdapter;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.view.Menu;
+import android.widget.Toast;
+
+import org.greenrobot.eventbus.EventBus;
+import org.greenrobot.eventbus.Subscribe;
+import org.greenrobot.eventbus.ThreadMode;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener,
         FolderAdapter.ItemClickListener, ThumbnailAdapter.ItemClickListener {
@@ -92,6 +99,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         sharedPref = this.getSharedPreferences("MyData", Context.MODE_PRIVATE);
         isLoggedIn=sharedPref.getBoolean("isLoggedIn",false);
 
+        EventBus.getDefault().register(this);
+
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        EventBus.getDefault().unregister(this);
+    }
+
+    @Subscribe(threadMode = ThreadMode.MAIN)
+    public void onMessageEvent(LocationItemClickEventBus event) {
+        Fragment targetFragment = adapter.getItem(0);
+        if (targetFragment instanceof LocationTabFragmentHolder) {
+            LocationTabFragmentHolder locationTab = (LocationTabFragmentHolder) targetFragment;
+            locationTab.showFragment(LocationTabFragmentHolder.USE_FRAGMENT_EVENTS, true);
+        }
     }
 
     @Override
