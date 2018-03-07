@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/remove"
+        android:icon="@drawable/trash"
+        android:title="Add watermark"
+        app:showAsAction="never"
+        />
+
+    <item
+        android:id="@+id/slide"
+        android:icon="@drawable/slideshow"
+        android:title="Remove Watermark"
+        app:showAsAction="never" />
+</menu>

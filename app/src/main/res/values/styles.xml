@@ -10,7 +10,7 @@
     </style>
 
     <style name="ToolbarTheme" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
-        <item name="android:textColorPrimary">@color/colorText</item>
+        <item name="android:textColorPrimary">@color/colorPrimary</item>
         <item name="android:actionMenuTextColor">@color/colorText</item>
         <item name="android:textViewStyle">@style/MonoSpaceTextViewStyle</item>
     </style>
@@ -35,6 +35,11 @@
     <style name="alertStyle" parent="@android:style/Theme.Dialog">
         <item name="android:alertDialogStyle">@style/CustomAlertDialogStyle</item>
         <item name="android:textColorPrimary">@color/section_font</item>
+    </style>
+
+    <style name="MyTabLayoutTextAppearance" parent="TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse">
+        <item name="android:textSize">8sp</item>
+        <item name="android:textAllCaps">true</item>
     </style>
 
     <style name="CustomAlertDialogStyle">

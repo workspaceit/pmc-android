@@ -16,6 +16,7 @@ import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.ScaleGestureDetector;
 import android.view.View;
@@ -51,7 +52,7 @@ public class FolderActivity extends AppCompatActivity implements View.OnClickLis
     RecyclerView folder_rv;
     GridRecycleView thumb_rv;
     private Toolbar toolbar;
-    private ImageView imageView, imageView1, imageView2, imageView3;
+    private ImageView imageViewSms, imageView1, imageView2, imageView3Mail;
     private SharedPreferences sharedPref;
     private boolean isLoggedIn = false;
     private LinearLayout bottom;
@@ -158,15 +159,15 @@ public class FolderActivity extends AppCompatActivity implements View.OnClickLis
             }
         });
 
-        imageView = (ImageView) findViewById(R.id.iv1);
+        imageViewSms = (ImageView) findViewById(R.id.sms);
         imageView1 = (ImageView) findViewById(R.id.iv2);
         imageView2 = (ImageView) findViewById(R.id.iv3);
-        imageView3 = (ImageView) findViewById(R.id.iv4);
+        imageView3Mail = (ImageView) findViewById(R.id.mail);
 
-        imageView.setOnClickListener(this);
+        imageViewSms.setOnClickListener(this);
         imageView1.setOnClickListener(this);
         imageView2.setOnClickListener(this);
-        imageView3.setOnClickListener(this);
+        imageView3Mail.setOnClickListener(this);
 
 
 //        spinner.setAdapter(adapter);
@@ -252,6 +253,14 @@ public class FolderActivity extends AppCompatActivity implements View.OnClickLis
                 thumbnailAdapter.notifyDataSetChanged();
             }
         }
+
+        if(v.getId() == R.id.sms) {
+            startActivity(new Intent(this, SendActivity.class));
+        }
+
+        if(v.getId() == R.id.mail) {
+            startActivity(new Intent(this, SendActivity.class));
+        }
 //        if(v.getId() == R.id.preview){
 //            if (!this.fullThumb){
 //                thumb_rv.setLayoutManager(null);
@@ -308,17 +317,23 @@ public class FolderActivity extends AppCompatActivity implements View.OnClickLis
     }
 
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        if (item.getItemId() == R.id.slide) {
-//            startActivity(new Intent(this,SlideShowActivity.class));
-            startActivity(new Intent(this, NewSliderActivity.class));
-        }
-        if (item.getItemId() == android.R.id.home) {
-            finish();
-        }
+//        if (item.getItemId() == R.id.slide) {
+////            startActivity(new Intent(this,SlideShowActivity.class));
+//            startActivity(new Intent(this, NewSliderActivity.class));
+//        }
+//        if (item.getItemId() == android.R.id.home) {
+//            finish();
+//        }
 
         return true;
     }

@@ -34,7 +34,7 @@ import com.workspaceit.photoclubbingme.R;
 
 public class ShowCaseActivity extends AppCompatActivity implements View.OnClickListener , BaseSliderView.OnSliderClickListener,ViewPagerEx.OnPageChangeListener {
 
-    private ImageView imageView, imageView1, imageView2, imageView3;
+    private ImageView imageViewSms, imageView1, imageView2, imageView3Mail;
     Toolbar toolbar;
     RoundedImageView imgWaterMark;
     RelativeLayout hideMask;
@@ -112,15 +112,15 @@ public class ShowCaseActivity extends AppCompatActivity implements View.OnClickL
         hideMask = (RelativeLayout) findViewById(R.id.hideMask);
         deleteMask = (RelativeLayout) findViewById(R.id.deleteMask);
 
-        imageView = (ImageView) findViewById(R.id.iv1);
+        imageViewSms = (ImageView) findViewById(R.id.sms);
         imageView1 = (ImageView) findViewById(R.id.iv2);
         imageView2 = (ImageView) findViewById(R.id.iv3);
-        imageView3 = (ImageView) findViewById(R.id.iv4);
+        imageView3Mail = (ImageView) findViewById(R.id.mail);
 
-        imageView.setOnClickListener(this);
+        imageViewSms.setOnClickListener(this);
         imageView1.setOnClickListener(this);
         imageView2.setOnClickListener(this);
-        imageView3.setOnClickListener(this);
+        imageView3Mail.setOnClickListener(this);
 
         HashMap<String,String> url_maps = new HashMap<String, String>();
         url_maps.put("1", "https://i.pinimg.com/originals/86/8a/e0/868ae003d42ce1d4e8eb861e5a5b1602.jpg");
@@ -159,6 +159,13 @@ public class ShowCaseActivity extends AppCompatActivity implements View.OnClickL
 
     @Override
     public void onClick(View v) {
+        if(v.getId() == R.id.sms) {
+            startActivity(new Intent(this, SendActivity.class));
+        }
+
+        if(v.getId() == R.id.mail) {
+            startActivity(new Intent(this, SendActivity.class));
+        }
         goToSend();
     }
 
