@@ -28,8 +28,8 @@
             android:layout_alignParentBottom="true"
             android:layout_alignParentStart="true"
             android:layout_marginBottom="10dp"
-            android:background="@color/loginBtn"
             android:orientation="vertical">
+            <!--android:background="@color/loginBtn"-->
 
             <TextView
                 android:id="@+id/folderName"

@@ -255,11 +255,11 @@ public class FolderActivity extends AppCompatActivity implements View.OnClickLis
         }
 
         if(v.getId() == R.id.sms) {
-            startActivity(new Intent(this, SendActivity.class));
+            startActivity(new Intent(this, SendInfoActivity.class));
         }
 
         if(v.getId() == R.id.mail) {
-            startActivity(new Intent(this, SendActivity.class));
+            startActivity(new Intent(this, SendInfoActivity.class));
         }
 //        if(v.getId() == R.id.preview){
 //            if (!this.fullThumb){
