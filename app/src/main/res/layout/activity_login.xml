@@ -56,10 +56,11 @@
                 android:gravity="center"
                 android:hint="Username"
                 android:inputType="text|textEmailAddress"
+                android:text="p@pmc.com"
                 android:textAlignment="textStart"
                 android:textColor="@color/loginformTxt"
-                android:textSize="18sp"
-                android:textColorHint="@color/loginformTxt"/>
+                android:textColorHint="@color/loginformTxt"
+                android:textSize="18sp" />
 
             <EditText
                 android:id="@+id/password"
@@ -69,8 +70,9 @@
                 android:ems="10"
                 android:hint="Password"
                 android:inputType="textPassword"
-                android:textColorHint="@color/loginformTxt"
-                android:textColor="@color/loginformTxt" />
+                android:text="123456"
+                android:textColor="@color/loginformTxt"
+                android:textColorHint="@color/loginformTxt" />
 
             <Button
                 android:id="@+id/forgotPassword"
